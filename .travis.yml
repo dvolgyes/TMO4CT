@@ -1,12 +1,29 @@
-# Config file for automatic testing at travis-ci.org
-
 language: python
-python:
-  - 3.6
-  - 3.5
 
-# Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: pip install -r requirements.txt
+matrix:
+    fast_finish: true
+    include:
+        - os: linux
+          dist: trusty
+          sudo: required
+          python: 3.6
+          env: PYVERSION="3"
 
-# Command to run tests, e.g. python setup.py test
-script: echo
+        - os: linux
+          dist: trusty
+          sudo: required
+          python: 3.5
+          env: PYVERSION="3"
+
+install:
+    - pip${PYVERSION} install --upgrade pip setuptools wheel
+    - pip${PYVERSION} install coveralls codecov pyflakes
+    - pip${PYVERSION} install -r requirements.txt
+    - pip${PYVERSION} install git+https://github.com/dvolgyes/TMO4CT
+
+script:
+  - make test
+
+after_success:
+  - coveralls
+#  - codecov
