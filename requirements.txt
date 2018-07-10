@@ -1,0 +1,7 @@
+pycontracts
+scipy
+numpy
+imageio
+tifffile
+dcm2hdr
+skimage
