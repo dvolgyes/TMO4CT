@@ -213,6 +213,10 @@ def main():
     check('int, >=0', options.bins, 'number of bins')
     check('float, >0', options.climit, 'contrast limit')
 
+    if len(args) == 0:
+        parser.print_help()
+        sys.exit(0)
+
     # Check power function definition
     if options.exps is None:
         options.exps = [1.0, ]
