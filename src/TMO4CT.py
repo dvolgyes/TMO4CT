@@ -14,6 +14,7 @@ import skimage.color
 from contracts import contract, check
 import imageio
 import tifffile as tiff
+from . import *
 
 # Libraries implemented for the article
 try:
