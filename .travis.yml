@@ -9,12 +9,6 @@ matrix:
           python: 3.6
           env: PYVERSION="3"
 
-        - os: linux
-          dist: trusty
-          sudo: required
-          python: 3.5
-          env: PYVERSION="3"
-
 install:
     - pip install --upgrade pip setuptools wheel
     - pip install coveralls codecov pyflakes
