@@ -11,6 +11,7 @@ import numpy as np
 def eprint(*args, **kwargs):
     """
     Print messages to the standard error, instead of the standard out.
+    >>> eprint("message")
     """
     print(*args, file=sys.stderr, **kwargs)
 
@@ -34,6 +35,12 @@ new_contract('dtype', lambda x: isinstance(x, np.dtype))
 
 
 def ceil_int(data):
+    """
+    >>> ceil_int(3.5)
+    4
+    >>> ceil_int((3.5,4.1))
+    (4, 5)
+    """
     if type(data) in [list, tuple]:
         result = []
         for x in data:
@@ -118,25 +125,38 @@ def dither_FS(image, levels=None, dtype=np.uint):
 
 
 @collect()
-def dither_basic(image, levels=None):
+def dither_basic(image, levels=None, dtype=np.uint):
     if levels is None:
         levels = int(image.max())+1
     result = np.floor(image).ravel()
     error = np.diff(np.floor(np.cumsum(image.ravel() - result))
                     ).astype(np.bool).astype(np.float32)
     result[1:] += error
-    return np.clip(result.reshape(image.shape), 0, levels-1)
+    return np.clip(result.reshape(image.shape), 0, levels-1).astype(dtype)
 
 
 @collect()
 @contract(image='array[NxM](float32)|array[NxM](float64)',
           levels='None|int,>1')
 def dither(image, levels=None, method='floyd', dtype=np.uint8):
+    """
+    >>> dither(np.arange(16).reshape(4,4)/4.0,levels=4)
+    array([[0, 0, 0, 1],
+           [1, 1, 1, 2],
+           [2, 2, 3, 2],
+           [3, 3, 3, 3]], dtype=uint8)
+    >>> dither(np.arange(16).reshape(4,4)/4.0,levels=4, method='basic')
+    array([[0, 0, 0, 1],
+           [1, 1, 2, 2],
+           [2, 2, 2, 3],
+           [3, 3, 3, 3]], dtype=uint8)
+
+    """
     if method in ['floyd', 'fs', 'floyd-steinberg']:
         # Floyd steinberg dithering
         return dither_FS(image, levels, dtype)
     # basic dithering
-    return dither_basic(image, levels)
+    return dither_basic(image, levels, dtype)
 
 
 @contextmanager
