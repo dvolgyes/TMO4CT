@@ -22,7 +22,7 @@ install:
     - pip install git+https://github.com/dvolgyes/TMO4CT
 
 script:
-  - make test
+  - make ci-test
 
 after_success:
   - coveralls
