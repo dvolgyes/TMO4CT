@@ -18,7 +18,7 @@ from TMO4CT import *
 
 # Libraries implemented for the article
 try:
-    from tools import dither, eprint   # Various tools
+    from TMO4CT.tools import dither, eprint   # Various tools
 except ImportError:
     from .tools import dither, eprint
 
