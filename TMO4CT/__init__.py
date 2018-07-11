@@ -4,11 +4,11 @@
 from .algorithm import tone_mapping
 from .tools import eprint, dither
 
-__version__ = '0.5.2'
+__version__ = '0.6'
 __title__ = 'TMO4CT'
 __summary__ = ('Distance-weighted local histogram equalization'
                ' based tone mapping for CT images.')
-__uri__ = 'https://gitlab.com/dvolgyes/TMO4CT'
+__uri__ = 'https://github.com/dvolgyes/TMO4CT'
 __license__ = 'AGPL v3'
 __author__ = 'David Völgyes'  # Author of the code. The article has co-authors.
 __email__ = 'david.volgyes@ieee.org'

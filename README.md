@@ -12,7 +12,7 @@ The primary aim was to develop a simple and effective tone
 mapping for CT images. The exact details are published
 in this article: UNDER REVIEW (will be updated if the paper is accepted)
 
-The code is implemented in Python3, and requires Python3.6 or newer.
+The code is implemented in Python3, and requires Python3.5 or newer.
 For higher execution speed, Numba is used. However, sometimes Numba
 can be quite difficult to install, therefore, it is not a strict requirement,
 and the code is able to run without Numba too, but with a significantly lower speed.
