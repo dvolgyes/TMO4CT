@@ -4,9 +4,13 @@
 import numpy as np
 import sys
 from gc import collect as garbage_collector
-from tools import rebin, ceil_int, eprint
 from scipy.interpolate import RegularGridInterpolator
 from functools import partial
+
+try:
+    from tools import rebin, ceil_int, eprint
+except ImportError:
+    from .tools import rebin, ceil_int, eprint
 
 
 def crop(array, width, height):

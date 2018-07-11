@@ -16,8 +16,15 @@ import imageio
 import tifffile as tiff
 
 # Libraries implemented for the article
-from tools import dither, eprint   # Various tools
-from algorithm import tone_mapping     # Tone mapping implementation
+try:
+    from tools import dither, eprint   # Various tools
+except ImportError:
+    from .tools import dither, eprint
+
+try:
+    from algorithm import tone_mapping     # Tone mapping implementation
+except ImportError:
+    from .algorithm import tone_mapping     # Tone mapping implementation
 
 
 def if_not_none(a, b):
