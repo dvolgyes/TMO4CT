@@ -4,8 +4,8 @@
 """The setup script."""
 
 from setuptools import setup, find_packages
-from src import (__description__, __version__, __author__,
-                 __email__, __summary__, __license__)
+from src.TMO4CT import (__description__, __version__, __author__,
+                        __email__, __summary__, __license__)
 
 
 requirements = ['pycontracts', 'scipy', 'numpy', 'imageio',
