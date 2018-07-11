@@ -33,7 +33,7 @@ setup(
     include_package_data=True,
     keywords=['tonemapping', 'CT'],
     name='TMO4CT',
-    packages=find_packages(where='src'),
+    packages=find_packages(where='.'),
     scripts=['TMO4CT_cli.py'],
     setup_requires=setup_requirements,
     test_suite='tests',
