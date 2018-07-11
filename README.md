@@ -67,8 +67,9 @@ human beings than CT images, and it is a great way to demonstrate
 the advantages and pitfalls. For instance, the small, hidden details
 are much more visible in the tone mapped version, but image noise, hidden
 staircasing could be highlighted if the enhancement is too strong.
-![original](https://github.com/dvolgyes/TMO4CT/raw/master/examples/ship1k.png "Original")
-![original](https://github.com/dvolgyes/TMO4CT/raw/master/examples/ship1k_tone_mapped.png "Tone mapped")
+
+![original](https://github.com/dvolgyes/TMO4CT/raw/master/examples/ship1k.png "Original" =512x)
+![tonemapped](https://github.com/dvolgyes/TMO4CT/raw/master/examples/ship1k_tone_mapped.png "Tone mapped" =512x)
 
 
 Remarks
@@ -83,4 +84,4 @@ It is simple:
 ```
 dcm2hdr.py INPUT_FILE OUTPUT_FILE
 ```
-For more details, visit its website.
+For more details, visit dcm2hdr's website: <https://github.com/dvolgyes/dcm2hdr>
