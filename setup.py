@@ -32,7 +32,7 @@ setup(
     long_description=__description__,
     include_package_data=True,
     keywords=['tonemapping', 'CT'],
-    name='tonemapping for CT',
+    name='TMO4CT',
     packages=find_packages(where='.'),
     scripts=['TMO4CT/TMO4CT.py'],
     setup_requires=setup_requirements,
