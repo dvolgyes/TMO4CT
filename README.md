@@ -68,8 +68,8 @@ the advantages and pitfalls. For instance, the small, hidden details
 are much more visible in the tone mapped version, but image noise, hidden
 staircasing could be highlighted if the enhancement is too strong.
 
-![original](https://github.com/dvolgyes/TMO4CT/raw/master/examples/ship1k.png "Original" =512x)
-![tonemapped](https://github.com/dvolgyes/TMO4CT/raw/master/examples/ship1k_tone_mapped.png "Tone mapped" =512x)
+![original](https://github.com/dvolgyes/TMO4CT/raw/master/examples/ship1k.png)
+![tonemapped](https://github.com/dvolgyes/TMO4CT/raw/master/examples/ship1k_tone_mapped.png | width=512)
 
 
 Remarks
