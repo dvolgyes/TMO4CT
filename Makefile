@@ -26,6 +26,5 @@ test-deploy:
 	pip3 uninstall TMO4CT
 
 deploy:
-	false
 	rm -fR build dist
 	python3 setup.py sdist bdist_wheel --universal && twine upload -r pypi dist/*
