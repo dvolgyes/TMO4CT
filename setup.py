@@ -4,8 +4,8 @@
 """The setup script."""
 
 from setuptools import setup, find_packages
-from src.TMO4CT import (__description__, __version__, __author__,
-                        __email__, __summary__, __license__)
+from TMO4CT import (__description__, __version__, __author__,
+                    __email__, __summary__, __license__)
 
 
 requirements = ['pycontracts', 'scipy', 'numpy', 'imageio',
@@ -33,8 +33,8 @@ setup(
     include_package_data=True,
     keywords=['tonemapping', 'CT'],
     name='tonemapping for CT',
-    packages=find_packages(where='src'),
-    # ~scripts=['src/TMO4CT.py'],
+    packages=find_packages(where='.'),
+    scripts=['TMO4CT/TMO4CT.py'],
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
