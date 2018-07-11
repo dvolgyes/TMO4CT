@@ -87,3 +87,7 @@ It is simple:
 dcm2hdr.py INPUT_FILE OUTPUT_FILE
 ```
 For more details, visit dcm2hdr's website: <https://github.com/dvolgyes/dcm2hdr>
+
+Issues
+------
+If you have any issue to report, please use Github's issue tracker.
