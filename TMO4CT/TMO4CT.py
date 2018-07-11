@@ -14,18 +14,18 @@ import skimage.color
 from contracts import contract, check
 import imageio
 import tifffile as tiff
-from TMO4CT import *
+from TMO4CT import eprint, dither, tone_mapping
 
 # Libraries implemented for the article
-try:
-    from TMO4CT.tools import dither, eprint   # Various tools
-except ImportError:
-    from .tools import dither, eprint
+# try:
+#    from TMO4CT.tools import dither, eprint   # Various tools
+# except ImportError:
+#    from .tools import dither, eprint
 
-try:
-    from algorithm import tone_mapping     # Tone mapping implementation
-except ImportError:
-    from .algorithm import tone_mapping     # Tone mapping implementation
+# try:
+#    from algorithm import tone_mapping     # Tone mapping implementation
+# except ImportError:
+#    from .algorithm import tone_mapping     # Tone mapping implementation
 
 
 def if_not_none(a, b):

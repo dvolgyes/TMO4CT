@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from .algorithm import tone_mapping as TMO
+from .algorithm import tone_mapping
+from .tools import eprint, dither
+
 
 __version__ = '0.1'
 __title__ = 'TMO4CT'
@@ -29,6 +31,7 @@ Zenodo. https://doi.org/"""
     + __doi__
 )
 
+TMO = tone_mapping
 __all__ = ['__version__',
            '__title__',
            '__summary__',
@@ -39,6 +42,8 @@ __all__ = ['__version__',
            '__doi__',
            '__description__',
            '__bibtex__',
-           '__reference__']
-
-tone_mapping = TMO
+           '__reference__',
+           tone_mapping,
+           TMO,
+           eprint,
+           dither]

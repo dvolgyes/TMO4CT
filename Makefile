@@ -5,7 +5,6 @@ default:
 
 ci-test:
 	@make -C test-data
-	python3 -m coverage run -a --source TMO4CT TMO4CT/__main__.py
 	python3 -m coverage run -a --source TMO4CT TMO4CT/tools.py
 	python3 -m coverage run -a --source TMO4CT TMO4CT/TMO4CT.py
 	python3 -m coverage run -a --source TMO4CT TMO4CT/TMO4CT.py -h
