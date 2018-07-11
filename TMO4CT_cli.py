@@ -14,7 +14,9 @@ import skimage.color
 from contracts import contract, check
 import imageio
 import tifffile as tiff
-from TMO4CT import eprint, dither, tone_mapping
+
+from TMO4CT.tools import eprint, dither
+from TMO4CT.algorithm import tone_mapping
 
 # Libraries implemented for the article
 # try:

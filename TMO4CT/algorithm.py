@@ -7,10 +7,10 @@ from gc import collect as garbage_collector
 from scipy.interpolate import RegularGridInterpolator
 from functools import partial
 
-try:
-    from tools import rebin, ceil_int, eprint
-except ImportError:
-    from .tools import rebin, ceil_int, eprint
+# try:
+from .tools import rebin, ceil_int, eprint
+# except ImportError:
+#    from .tools import rebin, ceil_int, eprint
 
 
 def crop(array, width, height):

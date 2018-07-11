@@ -4,7 +4,6 @@
 from .algorithm import tone_mapping
 from .tools import eprint, dither
 
-
 __version__ = '0.1'
 __title__ = 'TMO4CT'
 __summary__ = ('Distance-weighted local histogram equalization'
@@ -31,19 +30,23 @@ Zenodo. https://doi.org/"""
     + __doi__
 )
 
+tone_mapping = tone_mapping
 TMO = tone_mapping
-__all__ = ['__version__',
-           '__title__',
-           '__summary__',
-           '__uri__',
-           '__license__',
-           '__author__',
-           '__email__',
-           '__doi__',
-           '__description__',
-           '__bibtex__',
-           '__reference__',
-           tone_mapping,
-           TMO,
-           eprint,
-           dither]
+eprint = eprint
+dither = dither
+
+# __all__ = ['__version__',
+#           '__title__',
+#           '__summary__',
+#           '__uri__',
+#           '__license__',
+#           '__author__',
+#           '__email__',
+#           '__doi__',
+#           '__description__',
+#           '__bibtex__',
+#           '__reference__',
+#           tone_mapping,
+#           TMO,
+#           eprint,
+#           dither]
