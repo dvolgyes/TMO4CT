@@ -2,16 +2,15 @@ Tone mapping for CT images
 ==========================
 
 Travis:[![Build Status](https://travis-ci.org/dvolgyes/TMO4CT.svg?branch=master)](https://travis-ci.org/dvolgyes/TMO4CT)
-
 Coveralls:[![Coverage Status](https://coveralls.io/repos/github/dvolgyes/TMO4CT/badge.svg?branch=master)](https://coveralls.io/github/dvolgyes/TMO4CT?branch=master)
 Codecov:[![codecov](https://codecov.io/gh/dvolgyes/TMO4CT/branch/master/graph/badge.svg)](https://codecov.io/gh/dvolgyes/TMO4CT)
 
 [![pyversion](https://img.shields.io/pypi/pyversions/TMO4CT.svg)](https://pypi.org/project/TMO4CT/)
 [![PyPI - License](https://img.shields.io/pypi/l/TMO4CT.svg)](https://github.com/dvolgyes/TMO4CT/raw/master/LICENSE.txt)
 
-The primary aim to develop a simple and effective tone
+The primary aim was to develop a simple and effective tone
 mapping for CT images. The exact details are published
-in this article: UNDER REVIEW
+in this article: UNDER REVIEW (will be updated if the paper is accepted)
 
 The code is implemented in Python3, and requires Python3.6 or newer.
 For higher execution speed, Numba is used. However, sometimes Numba
