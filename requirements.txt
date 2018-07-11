@@ -4,4 +4,4 @@ numpy
 imageio
 tifffile
 dcm2hdr
-skimage
+scikit-image

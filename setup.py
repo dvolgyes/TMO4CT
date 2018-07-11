@@ -9,7 +9,7 @@ from src import (__description__, __version__, __author__,
 
 
 requirements = ['pycontracts', 'scipy', 'numpy', 'imageio',
-                'tifffile', 'dcm2hdr', 'skimage', 'python-magic']
+                'tifffile', 'dcm2hdr', 'scikit-image', 'python-magic']
 
 setup_requirements = []
 
