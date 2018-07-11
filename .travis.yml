@@ -16,14 +16,14 @@ matrix:
           env: PYVERSION="3"
 
 install:
-    - pip${PYVERSION} install --upgrade pip setuptools wheel
-    - pip${PYVERSION} install coveralls codecov pyflakes
-    - pip${PYVERSION} install -r requirements.txt
-    - pip${PYVERSION} install git+https://github.com/dvolgyes/TMO4CT
+    - pip install --upgrade pip setuptools wheel
+    - pip install coveralls codecov pyflakes
+    - pip install -r requirements.txt
+    - pip install git+https://github.com/dvolgyes/TMO4CT
 
 script:
   - make test
 
 after_success:
   - coveralls
-#  - codecov
+  - codecov
