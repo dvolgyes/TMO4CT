@@ -22,7 +22,8 @@ example:
 test-deploy:
 	rm -fR build dist
 	python3 setup.py sdist bdist_wheel --universal && twine upload -r pypitest dist/*
-	pip  install --user TMO4CT --index-url https://test.pypi.org/simple/
+	pip3  install --user TMO4CT --index-url https://test.pypi.org/simple/
+	pip3 uninstall TMO4CT
 
 deploy:
 	false

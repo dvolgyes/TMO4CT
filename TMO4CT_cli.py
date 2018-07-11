@@ -17,7 +17,7 @@ import tifffile as tiff
 
 from TMO4CT.tools import eprint, dither
 from TMO4CT.algorithm import tone_mapping
-
+from TMO4CT import __version__, __description__, __title__
 # Libraries implemented for the article
 # try:
 #    from TMO4CT.tools import dither, eprint   # Various tools
@@ -63,7 +63,9 @@ def read_image(filename, ftype=None):
 def main():
     from optparse import OptionParser
 
-    parser = OptionParser()
+    parser = OptionParser(description=__description__,
+                          prog=__title__,
+                          version='%prog ' + __version__)
     parser.add_option('-t', '--type',
                       action='store',
                       type='string',

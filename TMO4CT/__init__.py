@@ -4,7 +4,7 @@
 from .algorithm import tone_mapping
 from .tools import eprint, dither
 
-__version__ = '0.5'
+__version__ = '0.5.2'
 __title__ = 'TMO4CT'
 __summary__ = ('Distance-weighted local histogram equalization'
                ' based tone mapping for CT images.')
