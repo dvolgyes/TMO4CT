@@ -18,10 +18,11 @@ def eprint(*args, **kwargs):
 try:
     from numba import jit
 except ImportError:
-    eprint('  There is no NUMBA installed!')
-    eprint('  The code use a pure python fallback.')
-    eprint('  Try: pip install numba')
-    eprint('  or visit: https://numba.pydata.org/ for details.')
+    eprint("""
+  There is no NUMBA installed!
+  The code use a pure python fallback.')
+  Try: pip install numba')
+  or visit: https://numba.pydata.org/ for details.""")
 
     def jit(x): return x
 
