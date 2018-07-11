@@ -287,8 +287,8 @@ def main():
         if options.verbose > 1:
             eprint('    Image dimensions     : {}'.format(image.shape))
             if multi_channel:
-                eprint('    Color space, channel : {}, #{}' +
-                       ''.format(options.colorspace, color_channel))
+                eprint('    Color space, channel :' +
+                       ' {}, #{}'.format(options.colorspace, color_channel))
             else:
                 eprint('    Color space, channel : single channel data')
             eprint('    Dynamic range        : {} - {} '.format(m, M))
