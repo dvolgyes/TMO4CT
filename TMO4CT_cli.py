@@ -196,6 +196,12 @@ def main():
                       '"eucledian", "maximum", "manhattan"' +
                       'or any 0<p<inf float number.')
 
+    parser.add_option('--overwrite',
+                      action='store_true',
+                      dest='overwrite',
+                      help='Overwrite output file, if it already exists.',
+                      default=False)
+
     color_channel_mapping = {
         'HSV': 2,
         'YIQ': 0,
@@ -245,6 +251,11 @@ def main():
         output_file = os.path.join(
             options.outdir,
             fileroot + options.postfix + options.outtype)
+
+        if os.path.exists(output_file) and not options.overwrite:
+            eprint('Output file already exists!')
+            eprint('Use "--overwrite", if you want to overwrite it.')
+            sys.exit(0)
 
         # opening input file, and preprocessing
         image, itype = read_image(path, options.filetype)
