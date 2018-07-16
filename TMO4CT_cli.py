@@ -252,7 +252,7 @@ def main():
             options.outdir,
             fileroot + options.postfix + options.outtype)
 
-        if os.path.exists(output_file) and not options.overwrite:
+        if os.path.exists(output_file) and (not options.overwrite):
             eprint('Output file already exists!')
             eprint('Use "--overwrite", if you want to overwrite it.')
             sys.exit(0)
