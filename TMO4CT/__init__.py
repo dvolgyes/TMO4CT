@@ -4,7 +4,7 @@
 from .algorithm import tone_mapping
 from .tools import eprint, dither
 
-__version__ = '0.6'
+__version__ = '0.9'
 __title__ = 'TMO4CT'
 __summary__ = ('Distance-weighted local histogram equalization'
                ' based tone mapping for CT images.')
@@ -23,7 +23,7 @@ __bibtex__ = (
 }"""
 )
 __reference__ = (
-    """Unpublished."""
+    """Under review."""
     + __version__
     + """).
 Zenodo. https://doi.org/"""
