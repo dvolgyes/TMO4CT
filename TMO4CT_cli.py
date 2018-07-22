@@ -17,7 +17,7 @@ import tifffile as tiff
 
 from TMO4CT.tools import eprint, dither
 from TMO4CT.algorithm import tone_mapping
-from TMO4CT import __version__, __description__, __title__
+from TMO4CT import __version__, __description__, __title__, __reference__, __bibtex__
 # Libraries implemented for the article
 # try:
 #    from TMO4CT.tools import dither, eprint   # Various tools
@@ -113,18 +113,18 @@ def main():
                       dest='factors',
                       help='weight = factor/r^exponent (default factor=1.0)',
                       )
+    # Not yet implemented.
+    # ~parser.add_option('-m', '--meta',
+    # ~action='store_true',
+    # ~dest='meta',
+    # ~help='Record metadata to OUTPUT_FILE.meta',
+    # ~default=True)
 
-    parser.add_option('-m', '--meta',
-                      action='store_true',
-                      dest='meta',
-                      help='Record metadata to OUTPUT_FILE.meta',
-                      default=True)
-
-    parser.add_option('--no-meta',
-                      action='store_false',
-                      dest='meta',
-                      help='Do NOT record metadata.',
-                      default=True)
+    # ~parser.add_option('--no-meta',
+    # ~action='store_false',
+    # ~dest='meta',
+    # ~help='Do NOT record metadata.',
+    # ~default=True)
 
     parser.add_option('-M', '--maximum',
                       action='store',
@@ -202,6 +202,12 @@ def main():
                       help='Overwrite output file, if it already exists.',
                       default=False)
 
+    parser.add_option('--cite',
+                      dest='cite',
+                      action='store_true',
+                      default=False,
+                      help='print citation information')
+
     color_channel_mapping = {
         'HSV': 2,
         'YIQ': 0,
@@ -220,6 +226,14 @@ def main():
     # Test of input parameters
     check('int, >=0', options.bins, 'number of bins')
     check('float, >0', options.climit, 'contrast limit')
+
+    if options.cite:
+        print('Reference for this software:')
+        print(__reference__)
+        print()
+        print('Bibtex format:')
+        print(__bibtex__)
+        sys.exit(0)
 
     if len(args) == 0:
         parser.print_help()
