@@ -7,10 +7,11 @@ Codecov:[![codecov](https://codecov.io/gh/dvolgyes/TMO4CT/branch/master/graph/ba
 
 [![pyversion](https://img.shields.io/pypi/pyversions/TMO4CT.svg)](https://pypi.org/project/TMO4CT/)
 [![PyPI - License](https://img.shields.io/pypi/l/TMO4CT.svg)](https://github.com/dvolgyes/TMO4CT/raw/master/LICENSE.txt)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1319084.svg)](https://doi.org/10.5281/zenodo.1319084)
 
 The primary aim was to develop a simple and effective tone
 mapping for CT images. The exact details are published
-in this article: UNDER REVIEW (will be updated if the paper is accepted)
+in this article: UNDER PROCESSING (will be updated when the paper is published).
 
 The code is implemented in Python3, and requires Python3.5 or newer.
 For higher execution speed, Numba is used. However, sometimes Numba
