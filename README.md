@@ -2,7 +2,7 @@ Tone mapping for CT images
 ==========================
 
 Travis:[![Build Status](https://travis-ci.org/dvolgyes/TMO4CT.svg?branch=master)](https://travis-ci.org/dvolgyes/TMO4CT)
-Coveralls:[![Coverage Status](https://coveralls.io/repos/github/dvolgyes/TMO4CT/badge.svg?branch=master)](https://coveralls.io/github/dvolgyes/TMO4CT?branch=master)
+Coveralls:[![Coverage Status](https://img.shields.io/coveralls/github/dvolgyes/TMO4CT)](https://coveralls.io/github/dvolgyes/TMO4CT?branch=master)
 Codecov:[![codecov](https://codecov.io/gh/dvolgyes/TMO4CT/branch/master/graph/badge.svg)](https://codecov.io/gh/dvolgyes/TMO4CT)
 
 [![pyversion](https://img.shields.io/pypi/pyversions/TMO4CT.svg)](https://pypi.org/project/TMO4CT/)
