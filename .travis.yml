@@ -1,8 +1,12 @@
 language: python
+
 python:
-- "3.6"
-- "3.7"
-- "3.8"
+    - "3.6"
+    - "3.7"
+    - "3.8"
+
+env:
+    - NUMBA_DISABLE_JIT=1
 
 install:
     - pip install --upgrade pip setuptools wheel
