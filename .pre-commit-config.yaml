@@ -1,10 +1,10 @@
 repos:
 -   repo: https://github.com/bemeurer/beautysh
-    rev: '3.8'
+    rev: 'v6.2.1'
     hooks:
     - id: beautysh
 -   repo: https://github.com/jumanjihouse/pre-commit-hooks
-    rev: 1.7.1
+    rev: 3.0.0
     hooks:
     - id: shellcheck
 -   repo: https://github.com/pre-commit/pre-commit-hooks
