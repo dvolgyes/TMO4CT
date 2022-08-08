@@ -10,9 +10,11 @@ __summary__ = ('Distance-weighted local histogram equalization'
                ' based tone mapping for CT images.')
 __uri__ = 'https://github.com/dvolgyes/TMO4CT'
 __license__ = 'AGPL v3'
-__author__ = 'David Völgyes'  # Author of the source code. The article has co-authors.
+# Author of the source code. The article has co-authors.
+__author__ = 'David Völgyes'
 __email__ = 'david.volgyes@ieee.org'
-__doi__ = '10.5281/zenodo.1319084'  # Concept DOI, always redirects to the latest version.
+# Concept DOI, always redirects to the latest version.
+__doi__ = '10.5281/zenodo.1319084'
 __description__ = """
 This algorithm is a tone mapping / dynamic range reduction algorithm
 mainly for CT images, but it should work with regular (color) photos too.
